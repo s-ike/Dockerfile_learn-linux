@@ -1,7 +1,7 @@
 FROM centos:centos7
 
-RUN yum install -y less which \
-    && yum --setopt=tsflags='' install -y man-pages \
+RUN yum install -y less which sudo initscripts \
+    && yum --setopt=tsflags='' install -y man-pages-ja \
     && rm -rf /var/cache/yum/* \
     && yum clean all
 RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
