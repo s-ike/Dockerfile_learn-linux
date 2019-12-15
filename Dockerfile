@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-RUN yum install -y less which sudo initscripts \
+RUN yum install -y less which sudo initscripts traceroute \
     && yum --setopt=tsflags='' install -y man-pages-ja \
     && rm -rf /var/cache/yum/* \
     && yum clean all
